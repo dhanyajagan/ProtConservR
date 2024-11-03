@@ -12,15 +12,16 @@
 #' @return List containing processed sequences and metadata
 #' @examples
 #' # Reading from file: Insulin fasta
-#' Insulin_Sequences <- read_sequences(system.file("extdata", "IPR004825_Insulin.fasta", package = "ProtConservR"))
+#' Insulin_Sequences <- readSequences(system.file("extdata", "IPR004825_Insulin.fasta", package = "ProtConservR"))
 #' head(Insulin_Sequences)
 #'
 #' # Reading from file: Dermcidin/Lacritin fasta
-#' Dermcidin_Lacritin_Sequences <- read_sequences(system.file("extdata", "IPR043557_Dermcidin_Lacritin.fasta", package = "ProtConservR"))
+#' Dermcidin_Lacritin_Sequences <- readSequences(system.file("extdata", "IPR043557_Dermcidin_Lacritin.fasta", package = "ProtConservR"))
 #' head(Dermcidin_Lacritin_Sequences)
 #'
 #' @references
-#' Pagès H, Aboyoun P, Gentleman R, DebRoy S (2024). \emph{Biostrings: Efficient manipulation of biological strings.} R package version 2.74.0,
+#' Pagès H, Aboyoun P, Gentleman R, DebRoy S (2024). \emph{Biostrings: Efficient
+#' manipulation of biological strings.} R package version 2.74.0,
 #' \href{https://bioconductor.org/packages/Biostrings}{Link}.
 #'
 #' Barry J. Grant, Ana P. C. Rodrigues, Karim M. ElSawy, J. Andrew McCammon, Leo S.
@@ -31,7 +32,7 @@
 #' @export
 #' @import Biostrings
 
-read_sequences <- function(input, format = "fasta") {
+readSequences <- function(input, format = "fasta") {
   # Input validation
   if (!is.character(input)) {
     stop("Input must be a character string (file path)")
@@ -63,7 +64,7 @@ read_sequences <- function(input, format = "fasta") {
 
 #' Validate Input Format
 #'
-#' Validate input format for above function read_sequences
+#' Validate input format for above function readSequences
 #'
 #' @param input Character string to validate
 #'
