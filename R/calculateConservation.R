@@ -15,12 +15,12 @@
 #'
 #' @examples
 #' # Read sequences, create alignment, and calculate conservation scores.
-#' Insulin_Sequences <- readSequences(system.file("extdata", "IPR004825_Insulin.fasta",
+#' Dermcidin_Lacritin_Sequences <- readSequences(system.file("extdata", "IPR043557_Dermcidin_Lacritin.fasta",
 #'                           package = "ProtConservR"))
-#' Insulin_Alignment <- createAlignment(Insulin_Sequences, method = "ClustalW")
+#' Dermcidin_Lacritin_Alignment <- createAlignment(Dermcidin_Lacritin_Sequences, method = "ClustalW")
 #'
 #' # Calculate conservation scores
-#' Insulin_Conservation <- calculateConservation(Insulin_Alignment)
+#' Dermcidin_Lacritin_Conservation <- calculateConservation(Dermcidin_Lacritin_Alignment)
 #'
 #' @references
 #' Valdar, W.S.J. (2002). Scoring residue conservation. \emph{Proteins: Structure,

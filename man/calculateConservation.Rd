@@ -23,13 +23,13 @@ at that position. The scores are normalized to a 0-1 scale where 1 indicates
 perfect conservation.
 }
 \examples{
-# Read sequences, create alignment, and calculate conservation scores
-Insulin_Sequences <- readSequences(system.file("extdata", "IPR004825_Insulin.fasta",
+# Read sequences, create alignment, and calculate conservation scores.
+Dermcidin_Lacritin_Sequences <- readSequences(system.file("extdata", "IPR043557_Dermcidin_Lacritin.fasta",
                           package = "ProtConservR"))
-Insulin_Alignment <- createAlignment(sequences, method = "ClustalW")
+Dermcidin_Lacritin_Alignment <- createAlignment(Dermcidin_Lacritin_Sequences, method = "ClustalW")
 
 # Calculate conservation scores
-conservation <- calculateConservation(Insulin_Alignment)
+Dermcidin_Lacritin_Conservation <- calculateConservation(Dermcidin_Lacritin_Alignment)
 
 }
 \references{

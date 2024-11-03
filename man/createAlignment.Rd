@@ -32,14 +32,6 @@ alignment_muscle_DL <- createAlignment(Dermcidin_Lacritin_Sequences, method = "M
 # Create alignment using ClustalW
 alignment_clustal_DL <- createAlignment(Dermcidin_Lacritin_Sequences, method = "ClustalW")
 
-#' # Read sequences: Insulin
-Insulin_Sequences <- readSequences(system.file("extdata", "IPR004825_Insulin.fasta",
-                                     package = "ProtConservR"))
-# Create alignment using MUSCLE
-alignment_muscle_IN <- createAlignment(Insulin_Sequences, method = "MUSCLE")
-# Create alignment using ClustalW
-alignment_clustal_IN <- createAlignment(Insulin_Sequences, method = "ClustalW")
-
 }
 \references{
 Edgar, R.C. (2004) MUSCLE: multiple sequence alignment with high accuracy and
