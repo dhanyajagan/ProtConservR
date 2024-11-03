@@ -13,5 +13,5 @@ validate_input_format(input)
 Logical indicating if input is valid
 }
 \description{
-Validate input format for above function read_sequences
+Validate input format for above function readSequences
 }
