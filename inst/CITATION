@@ -1,0 +1,12 @@
+citHeader("To cite ProtConservR in publications use:")
+
+citEntry(entry = "Unpublished",
+  title        = "ProtConservR: R package for Analyzing and Visualizing Protein Sequence Conservation",
+  author       = "Dhanya Jagannathan",
+  note         = "Unpublished",
+  year         = "2024",
+
+  textVersion  =
+  paste("Jagannathan, D. (2024) ProtConservR: R package for Analyzing and Visualizing Protein Sequence Conservation.
+        Unpublished. URL https://github.com/dhanyajagan/ProtConservR.")
+)
