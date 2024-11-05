@@ -12,7 +12,6 @@
 #' @param height Numeric, height of viewer in pixels (default: 600)
 #' @param background Character, background color of viewer (default: "white")
 #' @param style Character, visualization style ("cartoon", "sphere", "stick", or "surface")
-#' @param show_labels Logical, whether to show residue labels with conservation scores (default: FALSE)
 #'
 #' @return r3dmol viewer object that can be displayed in R markdown or R console
 #'
@@ -61,8 +60,7 @@ threeDimStructureConservation <- function(input_pdb,
                                           width = 800,
                                           height = 600,
                                           background = "white",
-                                          style = c("cartoon", "sphere", "stick", "surface"),
-                                          show_labels = FALSE) {
+                                          style = c("cartoon", "sphere", "stick", "surface")) {
   # Input validation
   style <- match.arg(style)
 

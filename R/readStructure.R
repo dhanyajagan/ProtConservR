@@ -22,7 +22,6 @@
 #'
 #' @export
 #' @importFrom bio3d read.pdb
-#' @import bio3d
 readStructure <- function(pdb_input) {
   # Input validation
   if (!is.character(pdb_input)) {

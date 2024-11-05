@@ -1,8 +1,8 @@
 #' Read Protein Sequences from Fasta File
 #'
-#' Reads in unaligned protein sequences provided in a FASTA file. Protein
+#' Reads in unaligned protein sequences provided in a multifasta file. Protein
 #' sequences should be of a particular protein family, like hemoglobin, insulin,
-#' etc. User can use sample data located in inst/extdata/, or they can pull FASTA
+#' etc. User can use sample data located in inst/extdata/, or they can pull multifasta
 #' files of protein families of their choice from InterPro website as input into
 #' this function.
 #'
@@ -30,7 +30,7 @@
 #' \href{https://doi.org/10.1093/bioinformatics/btl461}{link}.
 #'
 #' @export
-#' @import Biostrings
+#' @importFrom Biostrings readAAStringSet
 
 readSequences <- function(input, format = "fasta") {
   # Input validation

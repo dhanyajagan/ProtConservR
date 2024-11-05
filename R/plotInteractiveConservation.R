@@ -1,15 +1,25 @@
 #' Visualize Protein Conservation Scores Interactively
 #'
 #' Creates an interactive visualization of protein conservation scores using plotly.
-#' The function generates multiple visualization types including a heatmap view of
+#' This function generates multiple visualization types including a heatmap view of
 #' the conservation scores, a line plot showing conservation across residues, and
 #' summary statistics.
 #'
-#' @param mapped_data List containing mapped conservation scores (output from mapConservation)
+#' @param mapped_data List containing mapped conservation scores (output from mapConservation())
 #' @param view_type Character, type of visualization: "all" (default), "heatmap", "line", or "stats"
 #' @param color_scheme Character, color scheme for conservation: "blues" (default) or "rainbow"
 #'
-#' @return plotly object containing the interactive visualization
+#' @return plotly object containing the interactive visualization. On the
+#' interactive map, the first plot is a heatmap, showing the conservation scores
+#' across residues. The color legend on the right indicates that lighter colours
+#' correspond to a larger conservation score, and darker colours correspond to a
+#' lower conservation score. Hovering over the heatmap, we can see three values
+#' x, y, and z. The relevant ones are x and z, where x represents the residue
+#' position and z represents the associated conservation score. The interactive,
+#' hoverable line plot below shows the same information in a different, line plot
+#' type representation, indicating the residue name as well. At the very bottom
+#' of the interactive map are some summary statistics of the max, mean, median,
+#' and min conservation scores.
 #'
 #' @examples
 #' # Read and process data
@@ -24,9 +34,17 @@
 #' # Create interactive visualization
 #' plotInteractiveConservation(mapped_data)
 #'
+#' @references Sievert C (2020). Interactive Web-Based Data Visualization with
+#' R, plotly, and shiny. Chapman and Hall/CRC. ISBN 9781138331457, https://plotly-r.com.
+#'
+#' R Core Team (2021). R: A language and environment for statistical
+#' computing. R Foundation for Statistical Computing, Vienna, Austria.
+#' URL https://www.R-project.org/.
+#'
 #' @export
 #' @importFrom plotly plot_ly layout subplot
 #' @importFrom stats density
+#' @importFrom magrittr %>%
 plotInteractiveConservation <- function(mapped_data,
                                   view_type = c("all", "heatmap", "line", "stats"),
                                   color_scheme = c("blues", "rainbow")) {

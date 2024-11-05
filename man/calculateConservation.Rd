@@ -7,7 +7,7 @@
 calculateConservation(alignment_data)
 }
 \arguments{
-\item{alignment_data}{List containing alignment and metadata (output from createAlignment function)}
+\item{alignment_data}{List containing alignment and metadata (output from createAlignment() function)}
 }
 \value{
 List containing:
@@ -19,7 +19,7 @@ List containing:
 \description{
 This function calculates conservation scores for each position in a multiple sequence
 alignment using Shannon's entropy. Lower entropy values indicate higher conservation
-at that position. The scores are normalized to a 0-1 scale where 1 indicates
+at that position. The scores are then normalized to a 0-1 scale where 1 indicates
 perfect conservation.
 }
 \examples{
@@ -36,8 +36,13 @@ Dermcidin_Lacritin_Conservation <- calculateConservation(Dermcidin_Lacritin_Alig
 Valdar, W.S.J. (2002). Scoring residue conservation. \emph{Proteins: Structure,
 Function, and Bioinformatics}, 48(2), 227-241.
 
-#' Barry J. Grant, Ana P. C. Rodrigues, Karim M. ElSawy, J. Andrew McCammon, Leo S.
+Barry J. Grant, Ana P. C. Rodrigues, Karim M. ElSawy, J. Andrew McCammon, Leo S.
 D. Caves, Bio3d: an R package for the comparative analysis of protein structures,
 \emph{Bioinformatics}, Volume 22, Issue 21, November 2006, Pages 2695–2696,
 \href{https://doi.org/10.1093/bioinformatics/btl461}{link}.
+
+Strait BJ, Dewey TG. The Shannon information entropy of protein sequences.
+Biophys J. 1996 Jul;71(1):148-55. doi: 10.1016/S0006-3495(96)79210-X.
+PMID: 8804598; PMCID: PMC1233466.
+\href{https://pmc.ncbi.nlm.nih.gov/articles/PMC1233466/}{link}
 }
