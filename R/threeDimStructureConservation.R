@@ -3,8 +3,7 @@
 #' Creates an interactive 3D visualization of protein structure colored by conservation
 #' scores. Uses r3dmol to create an interactive viewer where conservation scores are
 #' mapped to a color gradient from red (low conservation) to white (medium) to blue
-#' (high conservation). The viewer provides built-in controls for rotation, zoom,
-#' and style switching.
+#' (high conservation).
 #'
 #' @param input_pdb Path to input PDB file. Make sure to add a newline character to the PDB file if there is not one already
 #' @param mapped_data List containing mapped conservation scores from mapConservation()

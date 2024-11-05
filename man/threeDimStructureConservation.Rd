@@ -33,8 +33,7 @@ r3dmol viewer object that can be displayed in R markdown or R console
 Creates an interactive 3D visualization of protein structure colored by conservation
 scores. Uses r3dmol to create an interactive viewer where conservation scores are
 mapped to a color gradient from red (low conservation) to white (medium) to blue
-(high conservation). The viewer provides built-in controls for rotation, zoom,
-and style switching.
+(high conservation).
 }
 \details{
 The function creates an interactive 3D visualization where:
