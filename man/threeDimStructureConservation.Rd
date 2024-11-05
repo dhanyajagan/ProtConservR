@@ -10,8 +10,7 @@ threeDimStructureConservation(
   width = 800,
   height = 600,
   background = "white",
-  style = c("cartoon", "sphere", "stick", "surface"),
-  show_labels = FALSE
+  style = c("cartoon", "sphere", "stick", "surface")
 )
 }
 \arguments{
@@ -26,8 +25,6 @@ threeDimStructureConservation(
 \item{background}{Character, background color of viewer (default: "white")}
 
 \item{style}{Character, visualization style ("cartoon", "sphere", "stick", or "surface")}
-
-\item{show_labels}{Logical, whether to show residue labels with conservation scores (default: FALSE)}
 }
 \value{
 r3dmol viewer object that can be displayed in R markdown or R console

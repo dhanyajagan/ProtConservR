@@ -1,18 +1,27 @@
 Package: ProtConservR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: R package for Analyzing and Visualizing Protein Sequence Conservation 
 Version: 0.1.0
 Authors@R: person("Dhanya", "Jagannathan", 
                   email = "dhanya.jagannathan@mail.utoronto.ca", 
                   role = c("aut", "cre"))
 Maintainer: Dhanya Jagannathan <dhanya.jagannathan@mail.utoronto.ca>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: ProtConservR is an R package for analyzing and visualizing protein 
+    sequence conservation. It provides functions to (1) Read and process protein 
+    sequences from FASTA files, (2) Create multiple sequence alignments using 
+    MUSCLE or ClustalW. (3) Calculate position-specific conservation scores based 
+    on shannon entropy. (4) Map conservation scores to protein structure data. 
+    (5) Create plots and interactive visualizations of conservation data, including
+    line plots of conservation scores across residues, heatmaps of conservation 
+    scores, and 3D visualizations of protein structure colored by conservation. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
+URL: https://github.com/dhanyajagan/ProtConservR
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Depends: 
@@ -21,14 +30,14 @@ biocViews:
 Imports: 
     ggplot2 (>= 3.4.0),
     Biostrings, 
-    BiocManager,
-    BiocGenerics,
     msa, 
     muscle, 
     bio3d, 
     plotly, 
     r3dmol, 
     stats, 
-    grDevices
+    grDevices, 
+    magrittr
 Remotes:
     bioc::msa
+VignetteBuilder: knitr

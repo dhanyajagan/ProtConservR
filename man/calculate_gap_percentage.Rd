@@ -15,4 +15,9 @@ Numeric value representing gap percentage
 \description{
 Helper function to calculate the percentage of gaps in the alignment
 }
+\references{
+Alignment scoring, Gaps & Similarities. Sequence Alignment:
+Scores, Gaps and Gap Penalties. [accessed 2024 Nov 5].
+https://proteinstructures.com/sequence/sequence-alignment/
+}
 \keyword{internal}

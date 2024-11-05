@@ -106,12 +106,17 @@ createAlignment <- function(seq_data, method = c("MUSCLE", "ClustalW")) {
 }
 
 
+
 #' Calculate Gap Percentage in Alignment
 #'
 #' Helper function to calculate the percentage of gaps in the alignment
 #'
 #' @param alignment AAMultipleAlignment object or MsaAAMultipleAlignment object
 #' @return Numeric value representing gap percentage
+#'
+#' @references Alignment scoring, Gaps & Similarities. Sequence Alignment:
+#' Scores, Gaps and Gap Penalties. [accessed 2024 Nov 5].
+#' https://proteinstructures.com/sequence/sequence-alignment/
 #'
 #' @keywords internal
 calculate_gap_percentage <- function(alignment) {
