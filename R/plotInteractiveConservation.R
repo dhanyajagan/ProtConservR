@@ -34,7 +34,8 @@
 #' # Create interactive visualization
 #' plotInteractiveConservation(mapped_data)
 #'
-#' @references Sievert C (2020). Interactive Web-Based Data Visualization with
+#' @references
+#' Sievert C (2020). Interactive Web-Based Data Visualization with
 #' R, plotly, and shiny. Chapman and Hall/CRC. ISBN 9781138331457, https://plotly-r.com.
 #'
 #' R Core Team (2021). R: A language and environment for statistical
