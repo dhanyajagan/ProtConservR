@@ -71,7 +71,7 @@ the sequence alignment. See ?plotInteractiveConservation for more details.
 ```{r, warning=FALSE}
 
 Dermcidin_Lacritin_Mapped_Data <- mapConservation(Dermcidin_Lacritin_Conservation, Dermcidin_Lacritin_Structure)
-head(Dermcidin_Lacritin_Mapped_Data)
+head(Dermcidin_Lacritin_Mapped_Data$mapped_scores)
 plotInteractiveConservation(Dermcidin_Lacritin_Mapped_Data)
 ```
 
