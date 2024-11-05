@@ -25,6 +25,10 @@ Imports:
     BiocGenerics,
     msa, 
     muscle, 
-    bio3d
+    bio3d, 
+    plotly, 
+    r3dmol, 
+    stats, 
+    grDevices
 Remotes:
     bioc::msa
