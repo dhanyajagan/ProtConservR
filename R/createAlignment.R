@@ -47,7 +47,7 @@
 #' @export
 #' @importFrom Biostrings width
 #' @importFrom muscle muscle
-#' @importFrom msa msa
+#' @import msa
 #' @import seqinr
 
 createAlignment <- function(seq_data, method = c("MUSCLE", "ClustalW")) {
