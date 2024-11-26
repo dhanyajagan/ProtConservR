@@ -31,7 +31,6 @@ Imports:
     ggplot2 (>= 3.4.0),
     Biostrings, 
     msa, 
-    seqinr,
     muscle, 
     bio3d, 
     plotly, 
