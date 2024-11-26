@@ -17,3 +17,76 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(ProtConservR)
 ```
+
+Here, we will load in an example multifasta file, containing Dermcidin and Lacritin 
+protein sequences from various organisms using our readSequences() function, and align 
+them using our createAlignment() function. We then inspect the first couple of 
+lines of the alignment object, including the actual alignment and the associated metadata. 
+```{r, warning=FALSE}
+
+# save the create alignment object as a data object instead, so that user does not have to spend time running it. 
+Dermcidin_Lacritin_Sequences <- readSequences(system.file("extdata", "IPR043557_Dermcidin_Lacritin.fasta", package = "ProtConservR"))
+Dermcidin_Lacritin_Alignment$alignment
+Dermcidin_Lacritin_Alignment$metadata
+
+```
+
+Here, we calculate conservation scores for each position in a multiple sequence 
+alignment using Shannon's entropy. The scores are normalized to a 0-1 scale where 
+1 indicates perfect conservation. We then create a line plot of conservation scores for each position in the multiple sequence alignment.
+```{r, warning=FALSE}
+Dermcidin_Lacritin_Conservation <- calculateConservation(Dermcidin_Lacritin_Alignment)
+conservationScorePlotLine <- plotConservationScores(Dermcidin_Lacritin_Conservation, plot_type = "line")
+conservationScorePlotLine
+
+```
+
+Here, we read in a pdb file for a representative protein sequence (to represent 
+the protein Dermcidin). PDB files can be obtained from various databases. Here, 
+we obtained the PDB from InterPro, after querying 'Dermcidin'. Note, the choice 
+of the representative protein structure was arbitrary. User can choose any 
+structure they wish that is associated with their desired protein family to analyze.
+```{r, warning=FALSE}
+
+Dermcidin_Lacritin_Structure <- readStructure(system.file("extdata", "Dermcidin.pdb", package = "ProtConservR"))
+
+head(Dermcidin_Lacritin_Structure$atoms)
+
+
+```
+
+Here, we map our conservation scores obtained from alignment to our protein 
+structure, essentially adding an additional column, where, for each residue we 
+input its associated conservation obtained from the sequence level conservation 
+calculation. Sometimes, depending on the representative PDB structure you choose, 
+the number of residues in the structure might not equal the number of conservation
+scores. In this case, the function takes a simple approach and just maps the 
+conservation according to position.
+Next, we create an interactive visualization of protein conservation scores 
+using plotly. This function generates multiple visualization types including a 
+heatmap view of the conservation scores, a line plot showing conservation across 
+residues, and some simple summary statistics. This plot is intended to portray 
+similar information as the previous line plot for conservation scores, but this 
+time, with the residue information from the actual protein structure rather than 
+the sequence alignment. See ?plotInteractiveConservation for more details. 
+```{r, warning=FALSE}
+
+Dermcidin_Lacritin_Mapped_Data <- mapConservation(Dermcidin_Lacritin_Conservation, Dermcidin_Lacritin_Structure)
+head(Dermcidin_Lacritin_Mapped_Data$mapped_scores)
+plotInteractiveConservation(Dermcidin_Lacritin_Mapped_Data)
+```
+
+Here, we create an interactive 3D visualization of the representative protein structure colored by conservation scores. Uses r3dmol to create an interactive viewer where conservation scores are mapped to a color gradient from red (low conservation) to white (medium) to blue (high conservation). 
+```{r, warning=FALSE}
+
+threeDimStructureConservation(system.file("extdata", "Dermcidin.pdb", package = "ProtConservR"), mapped_data = Dermcidin_Lacritin_Mapped_Data)
+
+
+```
+
+
+
+
+
+
+
