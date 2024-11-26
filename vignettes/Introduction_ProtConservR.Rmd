@@ -24,10 +24,12 @@ protein sequences from various organisms using our readSequences() function, and
 them using our createAlignment() function. We then inspect the first couple of 
 lines of the alignment object, including the actual alignment and the associated metadata. 
 ```{r, warning=FALSE}
+
+# save the create alignment object as a data object instead, so that user does not have to spend time running it. 
 Dermcidin_Lacritin_Sequences <- readSequences(system.file("extdata", "IPR043557_Dermcidin_Lacritin.fasta", package = "ProtConservR"))
-Dermcidin_Lacritin_Alignment <- createAlignment(Dermcidin_Lacritin_Sequences, method = "ClustalW")
-head(Dermcidin_Lacritin_Alignment$alignment)
-head(Dermcidin_Lacritin_Alignment$metadata)
+Dermcidin_Lacritin_Alignment$alignment
+Dermcidin_Lacritin_Alignment$metadata
+
 ```
 
 Here, we calculate conservation scores for each position in a multiple sequence 
