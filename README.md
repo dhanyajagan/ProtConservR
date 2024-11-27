@@ -36,7 +36,7 @@ devtools::install_github("dhanyajagan/ProtConservR", build_vignettes = TRUE)
 library("ProtConservR")
 ```
 
-To run the Shiny app: `ls`
+To run the Shiny app: `runProtConservR()`
 
 ## Overview
 
