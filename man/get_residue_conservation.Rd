@@ -9,7 +9,7 @@ get_residue_conservation(mapped_data, residue_number, chain = NULL)
 \arguments{
 \item{mapped_data}{Output from mapConservation function}
 
-\item{residue_number}{Numeric residue number to query}
+\item{residue_number}{Positive integer indicating the residue number to to retrieve the conservation score}
 
 \item{chain}{Character chain ID (optional)}
 }

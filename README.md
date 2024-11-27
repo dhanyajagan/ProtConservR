@@ -20,6 +20,11 @@ residues, heatmaps of conservation scores on protein structure data
 (residues), and 3D visualizations of protein structure colored by
 conservation.
 
+Session Info: 
+R version 4.3.1 (2023-06-16)
+Platform: aarch64-apple-darwin20 (64-bit)
+Running under: macOS Sonoma 14.6.1
+
 ## Installation
 
 You can install the latest version of ProtConservR like so:
@@ -31,7 +36,7 @@ devtools::install_github("dhanyajagan/ProtConservR", build_vignettes = TRUE)
 library("ProtConservR")
 ```
 
-To run the Shiny app: `Under construction`
+To run the Shiny app: `ls`
 
 ## Overview
 
@@ -137,10 +142,6 @@ solving.
 - Sievert C (2020). Interactive Web-Based Data Visualization with R,
   plotly, and shiny. Chapman and Hall/CRC. ISBN 9781138331457,
   <https://plotly-r.com>.
-
-- R Core Team (2021). R: A language and environment for statistical
-  computing. R Foundation for Statistical Computing, Vienna, Austria.
-  URL <https://www.R-project.org/>.
 
 - Barry J. Grant, Ana P. C. Rodrigues, Karim M. ElSawy, J. Andrew
   McCammon, Leo S. D. Caves, Bio3d: an R package for the comparative
