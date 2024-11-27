@@ -10,7 +10,7 @@ threeDimStructureConservation(
   width = 800,
   height = 600,
   background = "white",
-  style = c("cartoon", "sphere", "stick", "surface")
+  style = c("cartoon", "sphere", "stick")
 )
 }
 \arguments{
@@ -24,7 +24,7 @@ threeDimStructureConservation(
 
 \item{background}{Character, background color of viewer (default: "white")}
 
-\item{style}{Character, visualization style ("cartoon", "sphere", "stick", or "surface")}
+\item{style}{Character, visualization style ("cartoon", "sphere", "stick")}
 }
 \value{
 r3dmol viewer object that can be displayed in R markdown or R console
@@ -33,7 +33,8 @@ r3dmol viewer object that can be displayed in R markdown or R console
 Creates an interactive 3D visualization of protein structure colored by conservation
 scores. Uses r3dmol to create an interactive viewer where conservation scores are
 mapped to a color gradient from red (low conservation) to white (medium) to blue
-(high conservation).
+(high conservation). NOTE:the conservation is not that apparent in the sphere
+and stick visualization style. For best results, try the cartoon style
 }
 \details{
 The function creates an interactive 3D visualization where:
