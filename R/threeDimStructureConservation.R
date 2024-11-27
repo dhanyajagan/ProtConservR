@@ -3,14 +3,15 @@
 #' Creates an interactive 3D visualization of protein structure colored by conservation
 #' scores. Uses r3dmol to create an interactive viewer where conservation scores are
 #' mapped to a color gradient from red (low conservation) to white (medium) to blue
-#' (high conservation).
+#' (high conservation). NOTE:the conservation is not that apparent in the sphere
+#' and stick visualization style. For best results, try the cartoon style
 #'
 #' @param input_pdb Path to input PDB file. Make sure to add a newline character to the PDB file if there is not one already
 #' @param mapped_data List containing mapped conservation scores from mapConservation()
 #' @param width Numeric, width of viewer in pixels (default: 800)
 #' @param height Numeric, height of viewer in pixels (default: 600)
 #' @param background Character, background color of viewer (default: "white")
-#' @param style Character, visualization style ("cartoon", "sphere", "stick", or "surface")
+#' @param style Character, visualization style ("cartoon", "sphere", "stick")
 #'
 #' @return r3dmol viewer object that can be displayed in R markdown or R console
 #'
@@ -59,7 +60,7 @@ threeDimStructureConservation <- function(input_pdb,
                                           width = 800,
                                           height = 600,
                                           background = "white",
-                                          style = c("cartoon", "sphere", "stick", "surface")) {
+                                          style = c("cartoon", "sphere", "stick")) {
   # Input validation
   style <- match.arg(style)
 
@@ -107,8 +108,7 @@ threeDimStructureConservation <- function(input_pdb,
     style_params <- switch(style,
                            "cartoon" = m_style_cartoon(color = color),
                            "sphere" = m_style_sphere(color = color),
-                           "stick" = m_style_stick(color = color),
-                           "surface" = m_style_surface(color = color, opacity = 0.85)
+                           "stick" = m_style_stick(color = color)
     )
 
     # Apply style to specific residue
