@@ -117,7 +117,7 @@ mapConservation <- function(conservation_data, structure_data, chain = NULL) {
 #' Helper function to retrieve the conservation score for a specific residue
 #'
 #' @param mapped_data Output from mapConservation function
-#' @param residue_number Numeric residue number to query
+#' @param residue_number Positive integer indicating the residue number to to retrieve the conservation score
 #' @param chain Character chain ID (optional)
 #'
 #' @return Numeric conservation score or NA if residue not found

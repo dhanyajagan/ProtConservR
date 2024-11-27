@@ -84,9 +84,35 @@ threeDimStructureConservation(system.file("extdata", "Dermcidin.pdb", package = 
 
 ```
 
+##Session Info
+R version 4.3.1 (2023-06-16)
+Platform: aarch64-apple-darwin20 (64-bit)
+Running under: macOS Sonoma 14.6.1
+
+## References
+
+Nicholas Rego and David Koes, 3Dmol.js: molecular visualization with WebGL,, Volume 31, Issue 8, April 2015, Pages 1322–1324.
+
+Sievert C (2020). Interactive Web-Based Data Visualization with R, plotly, and shiny. Chapman and Hall/CRC. ISBN 9781138331457, https://plotly-r.com.
 
 
+Barry J. Grant, Ana P. C. Rodrigues, Karim M. ElSawy, J. Andrew McCammon, Leo S. D. Caves, Bio3d: an R package for the comparative analysis of protein structures, , Volume 22, Issue 21, November 2006, Pages 2695–2696.
 
+Wickham H (2016). Springer-Verlag New York. ISBN 978-3-319-24277-4, https://ggplot2.tidyverse.org.
+
+Valdar, W.S.J. (2002). Scoring residue conservation. , 48(2), 227-241.
+
+Strait BJ, Dewey TG. The Shannon information entropy of protein sequences. Biophys J. 1996 Jul;71(1):148-55. doi: 10.1016/S0006-3495(96)79210-X. PMID: 8804598; PMCID: PMC1233466.
+
+Pagès H, Aboyoun P, Gentleman R, DebRoy S (2024). R package version 2.74.0, .
+
+Edgar, R.C. (2004) MUSCLE: multiple sequence alignment with high accuracy and high throughput. 32(5):1792-1797.
+
+Thompson, J.D., Higgins, D.G., Gibson, T.J. (1994) CLUSTAL W: improving the sensitivity of progressive multiple sequence alignment through sequence weighting, position-specific gap penalties and weight matrix choice. 22(22):4673-4680.
+
+Bodenhofer U, Bonatesta E, Horejs-Kainrath C, Hochreiter S (2015). “msa: an R package for multiple sequence alignment.” , 31(24), 3997–3999. doi:10.1093/bioinformatics/btv494
+
+OpenAI. (2024). ChatGPT (November 5, 2024). Retrieved from https://chat.openai.com
 
 
 
